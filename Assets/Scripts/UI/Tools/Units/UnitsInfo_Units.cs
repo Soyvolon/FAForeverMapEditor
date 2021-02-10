@@ -666,6 +666,11 @@ namespace EditMap
 			}
 		}
 
+		public void ClearSelectionAction()
+		{
+			SelectionManager.Current.CleanSelection();
+		}
+
 		UnitsStorage DuplicateData = null;
 		void DuplicateAction()
 		{

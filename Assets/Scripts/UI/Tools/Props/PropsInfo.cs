@@ -156,6 +156,7 @@ namespace EditMap
 			SelectionManager.Current.SetCopyActionAction(CopyAction);
 			SelectionManager.Current.SetPasteActionAction(PasteAction);
 			SelectionManager.Current.SetDuplicateActionAction(DuplicateAction);
+			SelectionManager.Current.SetClearActionAction(ClearSelectionAction);
 
 			ShowTab(CurrentTab);
 

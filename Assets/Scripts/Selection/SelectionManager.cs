@@ -66,6 +66,13 @@ namespace Selection
 					DuplicateAction?.Invoke();
 				}
 			}
+
+			if(Input.GetKeyDown(KeyCode.Escape))
+            {
+				Debug.Log("Escape key pressed in SelectionManager");
+				// Clear selection
+				ClearAction?.Invoke();
+            }
 		}
 
 		public static void ExecuteCopyAction()
@@ -89,6 +96,14 @@ namespace Selection
 				DuplicateAction?.Invoke();
 			}
 		}
+
+		public static void ExecuteClearAction()
+        {
+			if(Current.Active) // clearing items or closing menus, don't worry about focousing the input field.
+            {
+				ClearAction?.Invoke();
+            }
+        }
 
 		public enum SelectionControlTypes
 		{
@@ -426,6 +441,11 @@ namespace Selection
 			DuplicateAction = Action;
 		}
 
+		static System.Action ClearAction;
+		public void SetClearActionAction(System.Action Action)
+        {
+			ClearAction = Action;
+        }
 		#endregion
 	}
 }

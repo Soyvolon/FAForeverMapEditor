@@ -20,6 +20,7 @@ namespace EditMap
 			SelectionManager.Current.SetCopyActionAction(CopyAction);
 			SelectionManager.Current.SetPasteActionAction(PasteAction);
 			SelectionManager.Current.SetDuplicateActionAction(DuplicateAction);
+			SelectionManager.Current.SetClearActionAction(ClearSelectionAction);
 
 			GoToSelection();
 		}
@@ -39,6 +40,11 @@ namespace EditMap
 			HideUpdate();
 
 		}
+
+		public void ClearSelectionAction()
+        {
+			SelectionManager.Current.CleanSelection();
+        }
 
 		public void GoToSelection()
 		{

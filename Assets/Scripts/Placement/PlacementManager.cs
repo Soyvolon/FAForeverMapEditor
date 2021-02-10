@@ -96,6 +96,12 @@ public class PlacementManager : MonoBehaviour {
 	Vector3 StartScale;
 	void Update () {
 
+		if (KeyboardManager.EscapePressed())
+		{
+			Clear();
+			return;
+		}
+
 		if (!PlacementObject)
 		{
 			enabled = false;

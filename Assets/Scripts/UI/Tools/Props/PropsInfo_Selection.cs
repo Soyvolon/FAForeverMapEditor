@@ -22,6 +22,11 @@ namespace EditMap
 		}
 
 
+		public void ClearSelectionAction()
+		{
+			SelectionManager.Current.CleanSelection();
+		}
+
 		public void Place(Vector3[] Positions, Quaternion[] Rotations, Vector3[] Scales)
 		{
 			Place(Positions, Rotations, Scales, true);

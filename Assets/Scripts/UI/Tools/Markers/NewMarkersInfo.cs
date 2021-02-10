@@ -28,6 +28,7 @@ namespace EditMap
 			SelectionManager.Current.SetCopyActionAction(CopyAction);
 			SelectionManager.Current.SetPasteActionAction(PasteAction);
 			SelectionManager.Current.SetDuplicateActionAction(DuplicateAction);
+			SelectionManager.Current.SetClearActionAction(ClearSelectionAction);
 
 			if (CreationId >= 0)
 				SelectCreateNew(CreationId);
@@ -372,6 +373,11 @@ namespace EditMap
 		public void SelectMarkers()
 		{
 
+		}
+
+		public void ClearSelectionAction()
+        {
+			SelectionManager.Current.CleanSelection();
 		}
 
 		public void SnapAction(Transform marker, GameObject Connected)

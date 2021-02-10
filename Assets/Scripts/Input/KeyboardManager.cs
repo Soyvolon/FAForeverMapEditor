@@ -49,6 +49,11 @@ public class KeyboardManager {
 		return Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad4);
 	}
 
+	public static bool EscapePressed()
+    {
+		return Input.GetKeyDown(KeyCode.Escape);
+    }
+
 	const float ClickDownOffset = 0.5f;
 	const float ClickOffset = 0.1f;
 
